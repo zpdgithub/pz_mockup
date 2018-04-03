@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var indexRouter = require('./routes/index');
+var httpRouter = require('./routes/http');
 
 //设置跨域访问 
 app.all('*', function(req, res, next) {
@@ -12,6 +13,8 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+//路由
 app.use('/', indexRouter);
+app.use('/http', httpRouter); //http请求示例
 
 app.listen(3000);
