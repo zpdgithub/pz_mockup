@@ -1,0 +1,15 @@
+{
+    "name": "pz_mockup",
+    "version": "0.0.1",
+    "description": "自用 API mockup",
+    "main": "index.js",
+    "scripts": {
+        "start": "supervisor --harmony index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Peter Zou",
+    "license": "ISC",
+    "dependencies": {
+        "express": "4.16.3"
+    }
+}
