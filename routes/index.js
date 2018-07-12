@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
     res.send('hello, express');
 });
 
-router.get('/users/:name', function(req, res) {
+router.get('/users/:name', function (req, res) {
     res.send({
         title: 'hello',
         name: req.params.name
     });
 });
 
-router.get('/search', function(req, res) {
+router.get('/search', function (req, res) {
     res.send([{
         id: {
             videoId: '1'
@@ -42,5 +42,10 @@ router.get('/search', function(req, res) {
 
         }
     }]);
+});
+
+router.post('/file-upload', function (req, res, next) {
+    console.log(req.body);
+    console.log(req.files);
 });
 module.exports = router;
